@@ -8,13 +8,14 @@ export default function Booking() {
   const services = [
     {
       name: "Eyebrow Threading",
-      image: "/images/eyebrow-threading.jpg",
+      image: "/images/threading.jpg",
       link: "https://calendly.com/pvparekh14/perfect-threading-appointment"
     },
+    
     {
       name: "Men's Haircut",
       image: "/images/haircut.jpg",
-      link: "https://calendly.com/pvparekh14/perfect-threading-appointment"
+      link: "https://app.acuityscheduling.com/schedule.php?owner=36003100&appointmentType=category:Hair&ref=embedded_csp"
     },
     {
       name: "Waxing",
@@ -41,7 +42,7 @@ export default function Booking() {
   {services.map(service => (
     <div
       key={service.name}
-      className="bg-white border rounded-xl shadow-md hover:shadow-lg transition overflow-hidden flex flex-col animate-fadeIn"
+      className="bg-white border rounded-xl shadow-md hover:shadow-lg transition overflow-hidden flex flex-col animate-fadeIn " 
     >
       <div className="relative w-full h-[180px] overflow-hidden group">
         <Image
@@ -49,7 +50,7 @@ export default function Booking() {
           alt={service.name}
           layout="fill"
           objectFit="cover"
-          className="transition-transform duration-300 group-hover:scale-105"
+          className="transition-transform duration-400 group-hover:scale-115"
         />
       </div>
       <div className="p-6 flex flex-col flex-grow items-center justify-between">

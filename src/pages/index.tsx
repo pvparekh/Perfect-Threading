@@ -13,7 +13,7 @@ export default function Home() {
         </p>
         <Link
           href="/booking"
-          className="inline-block bg-gradient-to-r from-pink-600 to-rose-500 text-white text-lg px-8 py-4 rounded-lg shadow-md hover:from-pink-700 hover:to-rose-600 transition font-medium"
+          className="inline-block bg-gradient-to-r from-pink-600 to-rose-500 text-white text-xl px-8 py-4 rounded-lg shadow-md hover:scale-103 hover:to-rose-600 transition font-medium"
         >
           Book an Appointment
         </Link>

@@ -47,8 +47,64 @@ export default function BlogIndex() {
               </span>
             </div>
           </Link>
+          <Link
+            href="/blog/facial-guide"
+            className="group block bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden border border-gray-200"
+          >
+            <div className="relative w-full h-[200px]">
+              <Image
+                src="/images/threading.jpg"
+                alt="Facial Guide"
+                layout="fill"
+                objectFit="cover"
+                className="group-hover:scale-105 transition-transform duration-300"
+              />
+              <span className="absolute top-2 left-2 bg-pink-600 text-white text-xs font-semibold px-3 py-1 rounded">
+                Skincare
+              </span>
+            </div>
+            <div className="p-5">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                A Complete Guide to Facials
+              </h3>
+              <p className="text-gray-600 text-sm leading-6">
+                Learn how facials cleanse your pores, remove blackheads, and restore your skin's glow in this detailed guide.
+              </p>
+              <span className="inline-block mt-4 text-pink-600 font-medium hover:underline">
+                Read more →
+              </span>
+            </div>
+          </Link>
+          <Link
+            href="/blog/facial-guide"
+            className="group block bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden border border-gray-200"
+          >
+            <div className="relative w-full h-[200px]">
+              <Image
+                src="/images/waxing.jpg"
+                alt="Facial Guide"
+                layout="fill"
+                objectFit="cover"
+                className="group-hover:scale-105 transition-transform duration-300"
+              />
+              <span className="absolute top-2 left-2 bg-pink-600 text-white text-xs font-semibold px-3 py-1 rounded">
+                Skincare
+              </span>
+            </div>
+            <div className="p-5">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                A Complete Guide to Waxing
+              </h3>
+              <p className="text-gray-600 text-sm leading-6">
+                Learn how Waxing makes you gae
+              </p>
+              <span className="inline-block mt-4 text-pink-600 font-medium hover:underline">
+                Read more →
+              </span>
+            </div>
+          </Link>
+          
 
-          {/* You can copy/paste this card format to add more blog posts */}
         </div>
       </section>
     </Layout>
