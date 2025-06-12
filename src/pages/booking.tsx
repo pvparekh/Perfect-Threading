@@ -19,7 +19,7 @@ export default function Booking() {
     },
     {
       name: "Waxing",
-      image: "/images/waxing.jpg",
+      image: "/images/waxing2.jpg",
       link: "https://calendly.com/pvparekh14/perfect-threading-appointment"
     },
     {
