@@ -106,9 +106,75 @@ export default function Home() {
               <p className="text-sm text-gray-600">
                 Learn how facials cleanse your pores, remove blackheads, and restore your skin’s glow in this detailed guide.
               </p>
+              <span className="inline-block mt-4 text-pink-600 font-medium hover:underline">
+                Read more →
+              </span>
+            </div>
+          </Link>
+          <Link
+            href="/blog/threading-guide"
+            className="group block bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden border border-gray-200"
+          >
+            <div className="relative w-full h-[200px]">
+              <Image
+                src="/images/threading.jpg"
+                alt="Facial Guide"
+                layout="fill"
+                objectFit="cover"
+                className="group-hover:scale-105 transition-transform duration-300"
+              />
+              <span className="absolute top-2 left-2 bg-pink-600 text-white text-xs font-semibold px-3 py-1 rounded">
+                Hair Removal
+              </span>
+            </div>
+            <div className="p-5">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                A Complete Guide to Threading
+              </h3>
+              <p className="text-gray-600 text-sm leading-6">
+                Discover why threading is the cleaner, gentler way to shape brows and remove facial hair. no chemicals, no irritation, just precision.
+              </p>
+              <span className="inline-block mt-4 text-pink-600 font-medium hover:underline">
+                Read more →
+              </span>
+            </div>
+          </Link>
+          <Link
+            href="/blog/waxing-guide"
+            className="group block bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden border border-gray-200"
+          >
+            <div className="relative w-full h-[200px]">
+              <Image
+                src="/images/waxing.jpg"
+                alt="Facial Guide"
+                layout="fill"
+                objectFit="cover"
+                className="group-hover:scale-105 transition-transform duration-300"
+              />
+              <span className="absolute top-2 left-2 bg-pink-600 text-white text-xs font-semibold px-3 py-1 rounded">
+                Hair Removal
+              </span>
+            </div>
+            <div className="p-5">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                A Complete Guide to Waxing
+              </h3>
+              <p className="text-gray-600 text-sm leading-6">
+                Learn how waxing removes hair from the root for smoother skin, fewer ingrowns, and longer-lasting results than shaving ever could.
+
+              </p>
+              <span className="inline-block mt-4 text-pink-600 font-medium hover:underline">
+                Read more →
+              </span>
             </div>
           </Link>
         </div>
+        <div className="text-center mt-10">
+        <Link href="/blog" className="text-pink-600 font-medium my-10 hover:underline text-sm sm:text-base">
+          See all blog posts →
+        </Link>
+</div>
+
       </section>
 
       {/* Final Call to Action */}

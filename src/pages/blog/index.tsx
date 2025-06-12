@@ -48,7 +48,7 @@ export default function BlogIndex() {
             </div>
           </Link>
           <Link
-            href="/blog/facial-guide"
+            href="/blog/threading-guide"
             className="group block bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden border border-gray-200"
           >
             <div className="relative w-full h-[200px]">
@@ -60,15 +60,16 @@ export default function BlogIndex() {
                 className="group-hover:scale-105 transition-transform duration-300"
               />
               <span className="absolute top-2 left-2 bg-pink-600 text-white text-xs font-semibold px-3 py-1 rounded">
-                Skincare
+                Hair Removal
               </span>
             </div>
             <div className="p-5">
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                A Complete Guide to Facials
+                A Complete Guide to Threading
               </h3>
               <p className="text-gray-600 text-sm leading-6">
-                Learn how facials cleanse your pores, remove blackheads, and restore your skin's glow in this detailed guide.
+                Discover why threading is the cleaner, gentler way to shape brows and remove facial hair. no chemicals, no irritation, just precision.
+
               </p>
               <span className="inline-block mt-4 text-pink-600 font-medium hover:underline">
                 Read more →
@@ -76,7 +77,7 @@ export default function BlogIndex() {
             </div>
           </Link>
           <Link
-            href="/blog/facial-guide"
+            href="/blog/waxing-guide"
             className="group block bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden border border-gray-200"
           >
             <div className="relative w-full h-[200px]">
@@ -88,7 +89,7 @@ export default function BlogIndex() {
                 className="group-hover:scale-105 transition-transform duration-300"
               />
               <span className="absolute top-2 left-2 bg-pink-600 text-white text-xs font-semibold px-3 py-1 rounded">
-                Skincare
+                Hair Removal
               </span>
             </div>
             <div className="p-5">
@@ -96,7 +97,8 @@ export default function BlogIndex() {
                 A Complete Guide to Waxing
               </h3>
               <p className="text-gray-600 text-sm leading-6">
-                Learn how Waxing makes you gae
+                Learn how waxing removes hair from the root for smoother skin, fewer ingrowns, and longer-lasting results than shaving ever could.
+ 
               </p>
               <span className="inline-block mt-4 text-pink-600 font-medium hover:underline">
                 Read more →

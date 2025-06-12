@@ -15,7 +15,7 @@ export default function Booking() {
     {
       name: "Men's Haircut",
       image: "/images/haircut.jpg",
-      link: "https://app.acuityscheduling.com/schedule.php?owner=36003100&appointmentType=category:Hair&ref=embedded_csp"
+      link: "https://calendly.com/pvparekh14/perfect-threading-appointment"
     },
     {
       name: "Waxing",
@@ -40,30 +40,39 @@ export default function Booking() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
   {services.map(service => (
-    <div
-      key={service.name}
-      className="bg-white border rounded-xl shadow-md hover:shadow-lg transition overflow-hidden flex flex-col animate-fadeIn " 
-    >
-      <div className="relative w-full h-[180px] overflow-hidden group">
-        <Image
-          src={service.image}
-          alt={service.name}
-          layout="fill"
-          objectFit="cover"
-          className="transition-transform duration-400 group-hover:scale-115"
-        />
-      </div>
-      <div className="p-6 flex flex-col flex-grow items-center justify-between">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">{service.name}</h3>
+  <div
+    key={service.name}
+    className="bg-white border rounded-xl shadow-md hover:shadow-lg transition overflow-hidden flex flex-col animate-fadeIn"
+  >
+    <div className="relative w-full h-[180px] overflow-hidden group">
+      <Image
+        src={service.image}
+        alt={service.name}
+        layout="fill"
+        objectFit="cover"
+        className="transition-transform duration-400 group-hover:scale-115"
+      />
+    </div>
+
+    <div className="p-6 flex flex-col flex-grow items-center justify-between">
+      <h3 className="text-xl font-semibold text-gray-800 mb-4">{service.name}</h3>
+
+      {service.name.toLowerCase().includes("haircut") ? (
         <button
           onClick={() => router.push(service.link)}
           className="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition"
         >
           Book Now
         </button>
-      </div>
+      ) : (
+        <p className="text-sm text-red-600 font-medium text-center mt-2">
+          Please call <a href="tel:9733415970" className="underline">973 341 5970</a> to book an appointment!
+        </p>
+      )}
     </div>
-  ))}
+  </div>
+))}
+
 </div>
         <p className="text-sm text-gray-500 mt-12">
           Need help choosing a service? <a href="/contact" className="text-pink-600 hover:underline">Contact us</a>
