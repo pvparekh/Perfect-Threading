@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import { useState } from "react";
 
 export default function Services() {
+type Category = keyof typeof serviceData;
   const serviceData = {
     Threading: [
       { name: "Eyebrow", price: "$9" },
@@ -71,8 +72,8 @@ export default function Services() {
     ]
   };
 
-  const categories = Object.keys(serviceData);
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const categories = Object.keys(serviceData) as Category[];
+  const [selectedCategory, setSelectedCategory] = useState<Category>("Threading");
 
   return (
     <Layout>
