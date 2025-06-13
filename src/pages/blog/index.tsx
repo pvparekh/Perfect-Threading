@@ -40,7 +40,7 @@ export default function BlogIndex() {
                 A Complete Guide to Facials
               </h3>
               <p className="text-gray-600 text-sm leading-6">
-                Learn how facials cleanse your pores, remove blackheads, and restore your skin's glow in this detailed guide.
+                Learn how facials cleanse your pores, remove blackheads, and restore your skin&apos;s glow in this detailed guide.
               </p>
               <span className="inline-block mt-4 text-pink-600 font-medium hover:underline">
                 Read more →

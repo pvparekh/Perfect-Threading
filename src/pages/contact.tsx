@@ -8,7 +8,7 @@ export default function Contact() {
       <section className="bg-gradient-to-b from-pink-100 via-white to-rose-50 py-20 px-6 text-center">
         <h1 className="text-5xl font-extrabold text-gray-900 mb-4">Contact Us</h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          We'd love to hear from you. Whether it's about a service, a question, or feedback, reach out anytime!
+          We&apos;d love to hear from you. Whether it&apos;s about a service, a question, or feedback, reach out anytime!
         </p>
       </section>
 

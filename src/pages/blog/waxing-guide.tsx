@@ -25,7 +25,7 @@ export default function WaxingGuide() {
             </div>
 
             <p className="text-lg leading-8 mb-6 text-gray-700">
-              Shaving simply slices hair at the surface. Within 24–48 hours, you're already feeling stubble, and worse—risking razor bumps, ingrown hairs, and skin darkening over time. Waxing removes the entire hair from the root, giving you a clean finish that lasts 3–6 weeks.
+              Shaving simply slices hair at the surface. Within 24–48 hours, you&apos;re already feeling stubble, and worse—risking razor bumps, ingrown hairs, and skin darkening over time. Waxing removes the entire hair from the root, giving you a clean finish that lasts 3–6 weeks.
             </p>
 
             <p className="text-lg leading-8 mb-6 text-gray-700">
