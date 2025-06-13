@@ -237,3 +237,4 @@ export default function Home() {
   );
 }
 //deployment test - ignore
+console.log("Force rebuild – " + new Date().toISOString());
