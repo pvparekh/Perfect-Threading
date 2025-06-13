@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import Image from "next/image";
+import Link from "next/link"; 
 
 export default function Booking() {
   const router = useRouter();
@@ -46,12 +47,13 @@ export default function Booking() {
   >
     <div className="relative w-full h-[180px] overflow-hidden group">
       <Image
-        src={service.image}
-        alt={service.name}
-        layout="fill"
-        objectFit="cover"
-        className="transition-transform duration-400 group-hover:scale-115"
-      />
+  src={service.image}
+  alt={service.name}
+  fill
+  style={{ objectFit: "cover" }}
+  className="transition-transform duration-400 group-hover:scale-115"
+/>
+
     </div>
 
     <div className="p-6 flex flex-col flex-grow items-center justify-between">
@@ -75,7 +77,8 @@ export default function Booking() {
 
 </div>
         <p className="text-sm text-gray-500 mt-12">
-          Need help choosing a service? <a href="/contact" className="text-pink-600 hover:underline">Contact us</a>
+          Need help choosing a service? <Link href="/contact" className="text-pink-600 hover:underline">Contact us</Link>
+
         </p>
       </section>
     </Layout>

@@ -11,8 +11,9 @@ declare global {
       initInlineWidget: (config: {
         url: string;
         parentElement: HTMLElement | null;
-        prefill: Record<string, any>;
-        utm: Record<string, any>;
+        prefill?: { [key: string]: string };
+        utm?: { [key: string]: string };
+
       }) => void;
     };
   }
