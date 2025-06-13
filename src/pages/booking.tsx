@@ -19,7 +19,7 @@ export default function Booking() {
     },
     {
       name: "Waxing",
-      image: "/images/waxing2.jpg",
+      image: "/images/waxing3.jpg",
       link: "https://calendly.com/pvparekh14/perfect-threading-appointment"
     },
     {
@@ -66,7 +66,7 @@ export default function Booking() {
         </button>
       ) : (
         <p className="text-sm text-red-600 font-medium text-center mt-2">
-          Please call <a href="tel:9733415970" className="underline">973 341 5970</a> to book an appointment!
+          Please call <a href="tel:9733415970" className="underline">973-341-5970</a> to book an appointment!
         </p>
       )}
     </div>
