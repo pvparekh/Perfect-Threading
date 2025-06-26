@@ -1,5 +1,5 @@
 Perfect Threading Salon   
-- A salon website built using **Next.js 14**, **Tailwind CSS**, and **TypeScript**, featuring clean UI, service booking for haircuts, and informational blog content.
+- A website built for a local salon using **Next.js 14**, **Tailwind CSS**, and **TypeScript**, featuring clean UI, service booking for haircuts (to mor eeffectively manage customer traffic), and informational blog content.
 
 ![Preview](public/images/pf-ss.jpg.png) 
 ---
