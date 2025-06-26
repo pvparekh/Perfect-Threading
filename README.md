@@ -12,11 +12,9 @@ Perfect Threading Salon
 
 🧠 Features
 
-- 🖼️ **Elegant landing page** with smooth animations and gradient background
-- 💇 **Dedicated service pages** (e.g. threading, waxing, facials) with pricing and images
+- 💇 **Dedicated service pages** (e.g. threading, waxing, facials) with pricing 
 - 📆 **Booking system** using Calendly embeds for hassle-free scheduling
 - 🧾 **Informational blog** with skincare and grooming guides
-- 🧭 **Reusable layout and header components** for clean navigation
 - 📱 **Fully responsive design** across desktop and mobile
 
 ---
