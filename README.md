@@ -1,40 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+Perfect Threading Salon   
+- A salon website built using **Next.js 14**, **Tailwind CSS**, and **TypeScript**, featuring clean UI, service booking for haircuts, and informational blog content.
 
-## Getting Started
+![Preview](public/images/pf-ss.jpg.png) 
+---
 
-First, run the development server:
+🔗 Live Site  
+[https://perfect-threading.vercel.app](https://perfect-threading.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧠 Features
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- 💇 **Dedicated service pages** (e.g. threading, waxing, facials) with pricing 
+- 📆 **Booking system** using Calendly embeds for hassle-free scheduling
+- 🧾 **Informational blog** with skincare and grooming guides
+- 📱 **Fully responsive design** across desktop and mobile
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## ⚙️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Tech           | Purpose                              |
+|----------------|--------------------------------------|
+| Next.js 14     | Fullstack React framework            |
+| TypeScript     | Type-safe development                |
+| Tailwind CSS   | Utility-first styling framework      |
+| Framer Motion  | Animations and transitions           |
+| Vercel         | Deployment platform                  |
+| Calendly       | Thirdparty booking system integration |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+📁 File Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+/app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+page.tsx # Main landing page
 
-## Deploy on Vercel
+services/ # Service-specific pages (threading, waxing, etc.)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+booking.tsx # Booking page with Calendly
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+blog/ # Informational articles
+
+/components
+
+Header.tsx # Navigation component
+
+ServiceCard.tsx # Reusable service info cards
+
+/public/images
+
+threading.jpg
+
+waxing.jpg
+
+facial.jpg
