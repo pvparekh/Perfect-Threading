@@ -77,7 +77,7 @@ for (const width of widths) {
       await menu.click();
       await services.click();
       await page.waitForURL("**/services");
-      if ((await page.locator("h1").innerText()) !== "Our Services") failures.push("Mobile menu navigation failed");
+      await page.getByRole("heading", { name: "Our Services", level: 1 }).waitFor({ timeout: 10000 });
     } catch (error) {
       failures.push("Mobile menu: " + String(error).slice(0, 500));
     }
