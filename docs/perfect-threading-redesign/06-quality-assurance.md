@@ -42,3 +42,11 @@ Updated: 2026-10-11.
 ## Release gate
 
 The frontend redesign is implemented and its automated build, content preservation, navigation, responsive and basic accessibility gates are **passed**. **Production release is not approved** until a verifiable preview, owner review, external integrations, manual assistive-tech review and genuine production authorization. The PR remains draft and production `main` unchanged.
+
+## Final polish revision
+- Repaired visually observed inline article CTA button styling while keeping every original sentence and punctuation mark unchanged.
+- Added skip-to-main-content keyboard navigation, with an explicit focus target.
+- Expanded Axe checks to all article routes and added keyboard, reduced-motion, browser history, and non-destructive Calendly destination tests to local Chromium QA.
+- Existing source integrity, 99 viewport/route checks, type checks, lint and build must all pass again before describing this revision as complete.
+- The Calendly destination is intercepted in CI to avoid interacting with a real appointment. External provider availability is not asserted.
+- Any associated Vercel automated build is treated as a deployment and is not a substitute for quality review.

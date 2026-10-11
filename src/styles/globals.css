@@ -320,3 +320,22 @@ button { cursor: pointer; }
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
+
+/* Maintain the original reading flow around approved article booking links. */
+.site-main[data-page^="/blog/"] a[href="/booking"].underline,
+.site-main[data-page^="/blog/"] a[href="/booking"].underline:hover {
+  display: inline;
+  min-height: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--rose-dark) !important;
+  text-decoration: underline;
+  font: inherit;
+  letter-spacing: inherit;
+  transform: none;
+}
+.skip-link { position: fixed; top: -100px; left: 16px; z-index: 100; padding: .9rem 1.3rem; background: #fffdfb; color: #2c2326; border: 2px solid var(--rose-dark); font-weight: 700; }
+.skip-link:focus, .skip-link:focus-visible { top: 12px; }

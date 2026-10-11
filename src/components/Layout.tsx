@@ -74,8 +74,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }} />
         )}
       </Head>
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       <Navbar />
-      <main className="site-main" data-page={router.pathname} id="main-content">{children}</main>
+      <main className="site-main" data-page={router.pathname} id="main-content" tabIndex={-1}>{children}</main>
       <Footer />
     </>
   );

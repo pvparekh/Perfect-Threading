@@ -38,6 +38,14 @@ for (const width of widths) {
       if (!metrics.heading.trim()) failures.push(route + " " + width + " missing heading");
       if (metrics.documentWidth > metrics.vw + 3) failures.push(route + " " + width + " horizontal overflow: " + metrics.documentWidth + " > " + metrics.vw);
       if (metrics.h1Rect && (metrics.h1Rect.left < -2 || metrics.h1Rect.right > metrics.vw + 2)) failures.push(route + " " + width + " heading clipped");
+
+      if (route.startsWith("/blog/")) {
+        const links = page.locator('p a[href="/booking"].underline');
+        const displayModes = await links.evaluateAll((nodes) => nodes.map((node) => getComputedStyle(node).display));
+        if (!displayModes.length || displayModes.some((mode) => mode !== "inline")) {
+          failures.push(route + " " + width + ": article booking sentence link not inline");
+        }
+      }
       if (captureWidths.has(width) && fullScreenshot.has(route) || ((route === "/" || route === "/services") && [320, 768, 1024, 1920, 2560, 3440].includes(width))) {
         await page.evaluate(async () => {
           document.querySelectorAll('img[loading="lazy"], iframe[loading="lazy"]').forEach((element) => element.setAttribute("loading", "eager"));
@@ -48,7 +56,7 @@ for (const width of widths) {
         });
         await page.screenshot({ path: path.join("test-results/screenshots", label + "-" + width + ".png"), fullPage: true, animations: "disabled" });
       }
-      if ((width === 390 || width === 1440) && !route.startsWith("/blog/")) {
+      if (width === 390 || width === 1440) {
         const scan = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]).analyze();
         for (const violation of scan.violations) {
           accessibility.push({ route, width, id: violation.id, impact: violation.impact, targets: violation.nodes.map((n) => n.target).slice(0, 6) });
@@ -117,6 +125,49 @@ for (const width of widths) {
     } catch (error) { failures.push("Contact/booking regression " + width + ": " + String(error).slice(0, 400)); }
   }
   if (errors.length) failures.push("JS error " + width + ": " + errors.join(" | ").slice(0, 350));
+  await context.close();
+}
+
+/* Additional keyboard and non-destructive booking-path checks. */
+{
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  const page = await context.newPage();
+  try {
+    await page.goto(base + "/", { waitUntil: "domcontentloaded" });
+    await page.keyboard.press("Tab");
+    if (!(await page.locator(".skip-link").evaluate((el) => el === document.activeElement))) {
+      failures.push("Keyboard: skip link is not first tab stop");
+    }
+    const menu = page.locator(".mobile-menu-toggle");
+    await menu.focus();
+    await page.keyboard.press("Enter");
+    if (await menu.getAttribute("aria-expanded") !== "true") failures.push("Keyboard: mobile menu did not open");
+    await page.keyboard.press("Escape");
+    if (await menu.getAttribute("aria-expanded") !== "false") failures.push("Keyboard: mobile menu did not close");
+    if (!(await menu.evaluate((el) => el === document.activeElement))) failures.push("Keyboard: focus was not returned to menu toggle");
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    if (await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior) !== "auto") {
+      failures.push("Reduced motion: nonessential smooth scroll is active");
+    }
+    await page.goto(base + "/about");
+    await page.goto(base + "/services");
+    await page.goBack();
+    if (new URL(page.url()).pathname !== "/about") failures.push("Browser back did not work");
+  } catch (err) { failures.push("Keyboard/history regression: " + String(err).slice(0, 500)); }
+  await context.close();
+}
+{
+  const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  const page = await context.newPage();
+  try {
+    await page.route("https://calendly.com/**", (route) => route.fulfill({ status: 200, contentType: "text/html", body: "<title>Intercepted Calendly destination</title>" }));
+    await page.goto(base + "/booking", { waitUntil: "domcontentloaded" });
+    await page.getByRole("button", { name: "Book Now" }).click();
+    await page.waitForURL("https://calendly.com/pvparekh14/perfect-threading-appointment", { timeout: 12000 });
+    await page.goto(base + "/contact", { waitUntil: "domcontentloaded" });
+    const source = await page.locator("iframe[title]").getAttribute("src");
+    if (!source?.startsWith("https://www.google.com/maps/embed?pb=")) failures.push("Map embed URL changed");
+  } catch (err) { failures.push("Calendly navigation regression: " + String(err).slice(0, 500)); }
   await context.close();
 }
 await browser.close();
