@@ -1,30 +1,6 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
 import Image from "next/image";
-import { motion } from "framer-motion";
-const container = {
-  hidden: { opacity: 1 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.05,
-    },
-  },
-};
-
-const letter = {
-  hidden: { y: -40, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: "spring" as const,
-      damping: 12,
-      stiffness: 120,
-    },
-  },
-};
-
 export default function Home() {
   const title = "Perfect Threading Salon";
 
@@ -32,24 +8,7 @@ export default function Home() {
     <Layout>
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-rose-100 via-white to-pink-100 py-28 px-6 text-center">
-        <motion.div
-  initial="hidden"
-  animate="visible"
-  variants={container}
-  className="inline-block"
->
-  <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
-    {title.split("").map((char, index) => (
-      <motion.span
-        key={index}
-        variants={letter}
-        className="inline-block"
-      >
-        {char === " " ? "\u00A0" : char}
-      </motion.span>
-    ))}
-  </h1>
-</motion.div>
+        <div className="hero-title"><h1>{title}</h1></div>
 
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           Look sharp. Feel confident. Experience professional threading and beauty care tailored to you.
@@ -236,5 +195,3 @@ export default function Home() {
     </Layout>
   );
 }
-//deployment test - ignore
-console.log("Force rebuild – " + new Date().toISOString());

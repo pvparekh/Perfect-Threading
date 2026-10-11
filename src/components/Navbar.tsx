@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const items = [
   { label: "Home", href: "/" },
@@ -14,6 +14,7 @@ const items = [
 export default function Navbar() {
   const router = useRouter();
   const [open, setOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     const close = () => setOpen(false);
     router.events.on("routeChangeStart", close);
@@ -22,7 +23,7 @@ export default function Navbar() {
 
   return (
     <header className="site-header" onKeyDown={(event) => {
-      if (event.key === "Escape") setOpen(false);
+      if (event.key === "Escape") { setOpen(false); toggleRef.current?.focus(); }
     }}>
       <nav className="site-nav" aria-label="Main navigation">
         <Link href="/" className="site-brand" onClick={() => setOpen(false)}>
@@ -31,6 +32,7 @@ export default function Navbar() {
         </Link>
         <button
           type="button"
+          ref={toggleRef}
           className="mobile-menu-toggle"
           aria-expanded={open}
           aria-controls="main-navigation-links"

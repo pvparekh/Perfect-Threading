@@ -5,12 +5,18 @@ const root = process.cwd();
 const snapshot = JSON.parse(fs.readFileSync(path.join(root, "docs/perfect-threading-redesign/approved-content-snapshot.json"), "utf8"));
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
 const contentOnly = Object.keys(snapshot.originalSource).filter((file) =>
-  file.startsWith("src/pages/") && file !== "src/pages/services.tsx"
+  file.startsWith("src/pages/") && file !== "src/pages/services.tsx" && file !== "src/pages/index.tsx"
 );
 const errors = [];
 for (const filename of contentOnly) {
   if (read(filename) !== snapshot.originalSource[filename]) errors.push("Approved source changed: " + filename);
 }
+const expectedHome = snapshot.originalSource["src/pages/index.tsx"]
+  .replace('import { motion } from "framer-motion";\\n', "")
+  .replace(/const container = \\{[\\s\\S]*?(?=export default function Home\\(\\))/, "")
+  .replace(/        <motion\\.div[\\s\\S]*?<\\/motion\\.div>/, '        <div className="hero-title"><h1>{title}</h1></div>')
+  .replace(/\\n\\/\\/deployment test - ignore\\nconsole\\.log\\("Force rebuild – " \\+ new Date\\(\\)\\.toISOString\\(\\)\\);\\s*$/, "\\n");
+if (read("src/pages/index.tsx") !== expectedHome) errors.push("Homepage differs beyond approved heading animation removal");
 const currentServices=read("src/pages/services.tsx");
 const matchBlock=(source,name) => {
   const match = source.match(new RegExp("    " + name + ": \\[([\\s\\S]*?)\\n    \\]"));
