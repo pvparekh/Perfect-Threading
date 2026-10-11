@@ -28,3 +28,7 @@
 
 ## Acceptance status
 INCOMPLETE pending deployment build and genuine browser QA. Do not merge to production.
+
+## Browser smoke-test automation
+Expanded branch checks now include headless Chromium route screenshots at mobile through ultrawide widths, exact rendered menu price comparison, mobile navigation Escape behavior, and existing booking CTA counts. Screenshots are QA artifacts, not reviewed design approval.
+Check GitHub Actions artifact before describing any rendered results as tested. Actual visual design inspection still requires reviewing screenshots, not just passing overflow assertions.
