@@ -20,9 +20,9 @@ jobs:
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run build
-      - name: Install browser smoke-test tooling
+      - name: Install local browser quality tooling
         run: |
-          npm install --no-save --no-package-lock playwright
+          npm install --no-save --no-package-lock playwright @axe-core/playwright
           npx playwright install --with-deps chromium
       - name: Test rendered routes and viewport widths
         run: |
@@ -32,6 +32,10 @@ jobs:
             sleep 2
           done
           node scripts/browser-smoke.mjs
+      - name: Capture local-design review crops
+        if: always()
+        run: |
+          if curl --fail --silent http://127.0.0.1:3000/ > /dev/null; then node scripts/visual-export.mjs; fi
       - name: Upload browser screenshots and report
         if: always()
         uses: actions/upload-artifact@v4
