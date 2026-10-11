@@ -17,7 +17,8 @@ fs.mkdirSync("test-results/screenshots", { recursive: true });
 const browser = await chromium.launch({ headless: true });
 
 for (const width of widths) {
-  const page = await browser.newPage({ viewport: { width, height: width < 700 ? 844 : 900 }, deviceScaleFactor: 1 });
+  const context = await browser.newContext({ viewport: { width, height: width < 700 ? 844 : 900 }, deviceScaleFactor: 1 });
+  const page = await context.newPage();
   const errors = [];
   page.on("pageerror", (error) => errors.push(error.message));
   for (const route of routes) {
@@ -116,7 +117,7 @@ for (const width of widths) {
     } catch (error) { failures.push("Contact/booking regression " + width + ": " + String(error).slice(0, 400)); }
   }
   if (errors.length) failures.push("JS error " + width + ": " + errors.join(" | ").slice(0, 350));
-  await page.close();
+  await context.close();
 }
 await browser.close();
 const report = { routes: routes.length, widths, checkedRouteViewportPairs: checked, failures, warnings, accessibility };
