@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://perfect-threading.vercel.app/sitemap.xml
