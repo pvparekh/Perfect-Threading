@@ -192,7 +192,7 @@ for (const width of [390, 1440]) {
     else {
       const first = pending.first();
       await first.scrollIntoViewIfNeeded({ timeout: 10000 });
-      await page.waitForFunction(() => [...document.querySelectorAll('[data-reveal]')].some((el) => el.dataset.reveal === "shown" && el.getBoundingClientRect().top >= 0 && el.getBoundingClientRect().top < innerHeight), { timeout: 8000 });
+      await page.waitForFunction((element) => element?.getAttribute("data-reveal") === "shown", await first.elementHandle(), { timeout: 8000 });
       if (await first.getAttribute("data-reveal") !== "shown") failures.push("Motion " + width + ": reveal did not activate on scroll");
       const scrolled = await page.locator(".site-header").getAttribute("data-scrolled");
       if (scrolled !== "true") failures.push("Motion " + width + ": sticky header did not register scrolling");
@@ -230,7 +230,7 @@ for (const width of [390, 1440]) {
     await page.goto(base + "/", { waitUntil: "domcontentloaded" });
     const visible = await page.locator("h1").evaluate((el) => getComputedStyle(el).opacity === "1");
     if (!visible) failures.push("No-JavaScript visitor: homepage headline is hidden");
-    if (!(await page.getByRole("link", { name: "Book an Appointment" }).isVisible())) failures.push("No-JavaScript visitor: main booking CTA is hidden");
+    if (!(await page.locator('main > section:first-child > a[href="/booking"]').isVisible())) failures.push("No-JavaScript visitor: main booking CTA is hidden");
     await page.goto(base + "/services", { waitUntil: "domcontentloaded" });
     if (await page.locator(".service-menu li").count() !== 56) failures.push("No-JavaScript visitor: catalogue is incomplete");
   } catch (error) { failures.push("No-JavaScript progressive enhancement: " + String(error).slice(0, 450)); }
