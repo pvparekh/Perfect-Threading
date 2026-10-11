@@ -15,7 +15,7 @@ const currentServices=read("src/pages/services.tsx");
 const matchBlock=(source,name) => {
   const match = source.match(new RegExp("    " + name + ": \\[([\\s\\S]*?)\\n    \\]"));
   if (!match) return null;
-  return [...match[1].matchAll(/\\{ name: "([^"]+)", price: "([^"]+)" \\}/g)].map((m)=>({name:m[1],price:m[2]}));
+  return [...match[1].matchAll(/name: "([^"]+)", price: "([^"]+)"/g)].map((m)=>({name:m[1],price:m[2]}));
 };
 for (const section of snapshot.services) {
   const now=matchBlock(currentServices,section.category);
