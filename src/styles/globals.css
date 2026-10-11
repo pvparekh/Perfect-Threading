@@ -273,3 +273,41 @@ button { cursor: pointer; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
+
+/* Ultrawide art direction: expand visual compositions while containing reading widths. */
+@media (min-width: 2200px) {
+  html { font-size: clamp(16px, .52vw, 19px); }
+  .site-nav { width: min(calc(100% - 128px), 2100px); }
+  .site-footer {
+    padding-left: max(64px, calc((100vw - 1950px)/2));
+    padding-right: max(64px, calc((100vw - 1950px)/2));
+  }
+  .site-main[data-page="/"] > section:first-child {
+    padding-left: max(64px, calc((100vw - 1950px)/2));
+    padding-right: max(64px, calc((100vw - 1950px)/2));
+  }
+  .site-main[data-page="/"] > section:nth-child(2) > h2,
+  .site-main[data-page="/"] > section:nth-child(2) > div,
+  .site-main[data-page="/"] > section:nth-child(3) > h2,
+  .site-main[data-page="/"] > section:nth-child(3) > div,
+  .site-main[data-page="/"] > section:nth-child(4) > div:first-child,
+  .site-main[data-page="/"] > section:nth-child(4) > div:nth-child(2),
+  .site-main[data-page="/about"] > section:nth-child(2) > div,
+  .site-main[data-page="/about"] > section:nth-child(4) > div:last-child,
+  .site-main[data-page="/booking"] > section:first-child > div,
+  .site-main[data-page="/contact"] > section:nth-child(2) > div,
+  .site-main[data-page="/blog"] > section:nth-child(2) > div,
+  .site-main[data-page^="/blog/"] > section:first-child > div,
+  .service-directory {
+    max-width: 1950px;
+  }
+  .site-main[data-page="/"] > section:first-child::after { min-height: 620px; }
+  .site-main[data-page="/about"] > section:first-child,
+  .site-main[data-page="/booking"] > section:first-child,
+  .site-main[data-page="/contact"] > section:first-child,
+  .site-main[data-page="/blog"] > section:first-child,
+  .services-intro {
+    padding-left: max(64px, calc((100vw - 1950px)/2));
+    padding-right: max(64px, calc((100vw - 1950px)/2));
+  }
+}
