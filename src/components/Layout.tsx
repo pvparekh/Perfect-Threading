@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import SalonMotion from "./SalonMotion";
 import Footer from "./Footer";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -78,6 +79,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Navbar />
       <main className="site-main" data-page={router.pathname} id="main-content" tabIndex={-1}>{children}</main>
       <Footer />
+      <SalonMotion />
     </>
   );
 }

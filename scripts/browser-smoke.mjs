@@ -46,6 +46,8 @@ for (const width of widths) {
           failures.push(route + " " + width + ": article booking sentence link not inline");
         }
       }
+      // Full-page screenshots inspect the settled final design, not the offscreen pre-reveal state.
+      // Scroll-reveal activation itself is tested separately below.
       if (captureWidths.has(width) && fullScreenshot.has(route) || ((route === "/" || route === "/services") && [320, 768, 1024, 1920, 2560, 3440].includes(width))) {
         await page.evaluate(async () => {
           document.querySelectorAll('img[loading="lazy"], iframe[loading="lazy"]').forEach((element) => element.setAttribute("loading", "eager"));
@@ -53,6 +55,11 @@ for (const width of widths) {
             Promise.all([...document.images].map((img) => img.decode().catch(() => {}))),
             new Promise((resolve) => setTimeout(resolve, 3000)),
           ]);
+        });
+        await page.evaluate(() => {
+          document.querySelectorAll('[data-reveal="pending"]').forEach((element) => {
+            element.dataset.reveal = "shown";
+          });
         });
         await page.screenshot({ path: path.join("test-results/screenshots", label + "-" + width + ".png"), fullPage: true, animations: "disabled" });
       }
@@ -170,6 +177,69 @@ for (const width of widths) {
   } catch (err) { failures.push("Calendly navigation regression: " + String(err).slice(0, 500)); }
   await context.close();
 }
+
+/* Motion is a nonessential enhancement: prove interaction, scroll, and accessibility. */
+for (const width of [390, 1440]) {
+  const context = await browser.newContext({ viewport: { width, height: 850 }, reducedMotion: "no-preference" });
+  const page = await context.newPage();
+  try {
+    await page.goto(base + "/", { waitUntil: "domcontentloaded" });
+    await page.locator('main[data-motion="ready"]').waitFor({ timeout: 10000 });
+    const headline = await page.locator('main > section:first-child h1').evaluate((el) => getComputedStyle(el).animationName);
+    if (headline !== "salon-heading-enter") failures.push("Motion " + width + ": homepage heading entrance missing");
+    const pending = page.locator('[data-reveal="pending"]');
+    if (await pending.count() === 0) failures.push("Motion " + width + ": no below-fold scroll reveals armed");
+    else {
+      // A locator based on [data-reveal="pending"] retargets the next element
+      // after the first one reveals. Hold the same DOM node for this assertion.
+      const first = await pending.first().elementHandle();
+      if (!first) throw new Error("First pending reveal disappeared before activation");
+      await first.scrollIntoViewIfNeeded({ timeout: 10000 });
+      await page.waitForFunction((element) => element?.getAttribute("data-reveal") === "shown", first, { timeout: 8000 });
+      if (await first.getAttribute("data-reveal") !== "shown") failures.push("Motion " + width + ": reveal did not activate on scroll");
+      const scrolled = await page.locator(".site-header").getAttribute("data-scrolled");
+      if (scrolled !== "true") failures.push("Motion " + width + ": sticky header did not register scrolling");
+    }
+    await page.goto(base + "/services", { waitUntil: "domcontentloaded" });
+    await page.locator('main[data-motion="ready"]').waitFor({ timeout: 10000 });
+    const menus = await page.locator(".service-menu li").count();
+    if (menus !== 56) failures.push("Motion " + width + ": 56 service rows not present");
+  } catch (error) {
+    failures.push("Motion interaction " + width + ": " + String(error).slice(0, 450));
+  }
+  await context.close();
+}
+
+{
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: "reduce" });
+  const page = await context.newPage();
+  try {
+    await page.goto(base + "/", { waitUntil: "domcontentloaded" });
+    await page.locator("h1").waitFor();
+    await page.waitForTimeout(250);
+    if (await page.locator('[data-reveal="pending"]').count()) failures.push("Reduced-motion visitor: content remained pending");
+    const hero = await page.locator("h1").evaluate((el) => getComputedStyle(el).animationName);
+    if (hero !== "none") failures.push("Reduced-motion visitor: heading entrance still animated");
+    await page.goto(base + "/services", { waitUntil: "domcontentloaded" });
+    if (await page.locator(".service-menu li").count() !== 56) failures.push("Reduced-motion visitor: service menu is incomplete");
+  } catch (error) { failures.push("Reduced-motion regression: " + String(error).slice(0, 450)); }
+  await context.close();
+}
+
+{
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, javaScriptEnabled: false });
+  const page = await context.newPage();
+  try {
+    await page.goto(base + "/", { waitUntil: "domcontentloaded" });
+    const visible = await page.locator("h1").evaluate((el) => getComputedStyle(el).opacity === "1");
+    if (!visible) failures.push("No-JavaScript visitor: homepage headline is hidden");
+    if (!(await page.locator('main > section:first-child > a[href="/booking"]').isVisible())) failures.push("No-JavaScript visitor: main booking CTA is hidden");
+    await page.goto(base + "/services", { waitUntil: "domcontentloaded" });
+    if (await page.locator(".service-menu li").count() !== 56) failures.push("No-JavaScript visitor: catalogue is incomplete");
+  } catch (error) { failures.push("No-JavaScript progressive enhancement: " + String(error).slice(0, 450)); }
+  await context.close();
+}
+
 await browser.close();
 const report = { routes: routes.length, widths, checkedRouteViewportPairs: checked, failures, warnings, accessibility };
 fs.writeFileSync("test-results/browser-smoke.json", JSON.stringify(report, null, 2));
