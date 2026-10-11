@@ -1,0 +1,58 @@
+name: One-time secure Next.js lockfile regeneration
+on:
+  push:
+    branches:
+      - design/research-led-salon-redesign
+permissions:
+  contents: write
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Regenerate package lock using npm
+        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+      - name: Verify clean lock install
+        run: npm ci --no-audit --no-fund
+      - name: Audit original business content
+        run: npm run verify:content
+      - name: Validate types
+        run: npm run typecheck
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build
+      - name: Install browser QA tooling
+        run: |
+          npm install --no-save --no-package-lock playwright @axe-core/playwright
+          npx playwright install --with-deps chromium
+      - name: Run complete browser QA
+        run: |
+          npm run start -- --port 3000 > /tmp/salon-next.log 2>&1 &
+          for n in $(seq 1 50); do
+            if curl --fail --silent http://127.0.0.1:3000/ > /dev/null; then break; fi
+            sleep 2
+          done
+          node scripts/browser-smoke.mjs
+      - name: Upload verified lockfile and browser report
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-secure-nextjs-lock-and-qa
+          path: |
+            package-lock.json
+            test-results/browser-smoke.json
+      - name: Commit tested lockfile and remove one-time workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git rm .github/workflows/secure-next-lock.yml
+          git commit -m "chore: lock patched Next.js 15.5.27 after passing all QA checks"
+          git push origin "HEAD:refs/heads/design/research-led-salon-redesign"

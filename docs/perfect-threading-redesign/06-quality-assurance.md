@@ -50,3 +50,6 @@ The frontend redesign is implemented and its automated build, content preservati
 - Existing source integrity, 99 viewport/route checks, type checks, lint and build must all pass again before describing this revision as complete.
 - The Calendly destination is intercepted in CI to avoid interacting with a real appointment. External provider availability is not asserted.
 - Any associated Vercel automated build is treated as a deployment and is not a substitute for quality review.
+
+## Security release gate, October 2026
+Vercel rejected a git-triggered preview build of commit 4d8e5870 with error `VULNERABLE_NEXTJS_VERSION`. Its deployed dependency was the original Next.js 15.3.3. The upstream advisory identifies patched releases for the affected Next.js family. The project is upgrading within the existing Pages Router to Next.js 15.5.27 and matching eslint-config-next 15.5.27. The one-time lockfile regeneration workflow requires content, type, ESLint, production build and full browser QA to pass before committing the generated lockfile to the working branch. No safety override environment variable or production configuration change is used. A new preview must be confirmed READY, not merely BUILDING.
