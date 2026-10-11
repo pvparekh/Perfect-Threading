@@ -38,6 +38,13 @@ for (const width of widths) {
       if (metrics.documentWidth > metrics.vw + 3) failures.push(route + " " + width + " horizontal overflow: " + metrics.documentWidth + " > " + metrics.vw);
       if (metrics.h1Rect && (metrics.h1Rect.left < -2 || metrics.h1Rect.right > metrics.vw + 2)) failures.push(route + " " + width + " heading clipped");
       if (captureWidths.has(width) && fullScreenshot.has(route) || ((route === "/" || route === "/services") && [320, 768, 1024, 1920, 2560, 3440].includes(width))) {
+        await page.evaluate(async () => {
+          document.querySelectorAll('img[loading="lazy"], iframe[loading="lazy"]').forEach((element) => element.setAttribute("loading", "eager"));
+          await Promise.race([
+            Promise.all([...document.images].map((img) => img.decode().catch(() => {}))),
+            new Promise((resolve) => setTimeout(resolve, 3000)),
+          ]);
+        });
         await page.screenshot({ path: path.join("test-results/screenshots", label + "-" + width + ".png"), fullPage: true, animations: "disabled" });
       }
       if ((width === 390 || width === 1440) && !route.startsWith("/blog/")) {
