@@ -190,9 +190,12 @@ for (const width of [390, 1440]) {
     const pending = page.locator('[data-reveal="pending"]');
     if (await pending.count() === 0) failures.push("Motion " + width + ": no below-fold scroll reveals armed");
     else {
-      const first = pending.first();
+      // A locator based on [data-reveal="pending"] retargets the next element
+      // after the first one reveals. Hold the same DOM node for this assertion.
+      const first = await pending.first().elementHandle();
+      if (!first) throw new Error("First pending reveal disappeared before activation");
       await first.scrollIntoViewIfNeeded({ timeout: 10000 });
-      await page.waitForFunction((element) => element?.getAttribute("data-reveal") === "shown", await first.elementHandle(), { timeout: 8000 });
+      await page.waitForFunction((element) => element?.getAttribute("data-reveal") === "shown", first, { timeout: 8000 });
       if (await first.getAttribute("data-reveal") !== "shown") failures.push("Motion " + width + ": reveal did not activate on scroll");
       const scrolled = await page.locator(".site-header").getAttribute("data-scrolled");
       if (scrolled !== "true") failures.push("Motion " + width + ": sticky header did not register scrolling");
