@@ -311,3 +311,12 @@ button { cursor: pointer; }
     padding-right: max(64px, calc((100vw - 1950px)/2));
   }
 }
+
+/* Browser-audited accessible interactive states. */
+.service-category-mark { color: #753c4c; }
+.site-nav-links .nav-booking[aria-current="page"] { color: #fff; }
+.site-main[data-page="/booking"] > section:first-child > p:last-child a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
