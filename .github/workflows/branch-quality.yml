@@ -1,0 +1,45 @@
+name: Branch quality checks
+on:
+  push:
+    branches:
+      - design/research-led-salon-redesign
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm run verify:content
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run build
+      - name: Install local browser quality tooling
+        run: |
+          npm install --no-save --no-package-lock playwright @axe-core/playwright
+          npx playwright install --with-deps chromium
+      - name: Test rendered routes and viewport widths
+        run: |
+          npm run start -- --port 3000 > /tmp/salon-next.log 2>&1 &
+          for n in $(seq 1 40); do
+            if curl --fail --silent http://127.0.0.1:3000/ > /dev/null; then break; fi
+            sleep 2
+          done
+          node scripts/browser-smoke.mjs
+      - name: Capture local-design review crops
+        if: always()
+        run: |
+          if curl --fail --silent http://127.0.0.1:3000/ > /dev/null; then node scripts/visual-export.mjs; fi
+      - name: Upload browser screenshots and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: perfect-threading-browser-qa
+          path: test-results/
+          if-no-files-found: ignore

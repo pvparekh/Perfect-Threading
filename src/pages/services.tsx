@@ -1,9 +1,8 @@
+import Image from "next/image";
+import Link from "next/link";
 import Layout from "../components/Layout";
-import { useState } from "react";
 
-export default function Services() {
-type Category = keyof typeof serviceData;
-  const serviceData = {
+const serviceData = {
     Threading: [
       { name: "Eyebrow", price: "$9" },
       { name: "Men’s Eyebrow", price: "$10" },
@@ -72,41 +71,66 @@ type Category = keyof typeof serviceData;
     ]
   };
 
-  const categories = Object.keys(serviceData) as Category[];
-  const [selectedCategory, setSelectedCategory] = useState<Category>("Threading");
+type Category = keyof typeof serviceData;
+const categories = Object.keys(serviceData) as Category[];
+const categoryImages: Partial<Record<Category, string>> = {
+  Threading: "/images/threading.jpg",
+  Waxing: "/images/waxing3.jpg",
+  Facials: "/images/facial.jpg",
+  Hair: "/images/haircut.jpg",
+};
 
+export default function Services() {
   return (
     <Layout>
-      <section className="bg-white py-20 px-6 text-center">
-        <h1 className="text-5xl font-bold text-gray-800 mb-8">Our Services</h1>
-
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-6 py-2 rounded-full border text-sm font-medium transition ${
-                selectedCategory === cat ? "bg-pink-600 text-white" : "bg-white text-gray-700 hover:bg-pink-100"
-              }`}
-            >
-              {cat}
-            </button>
+      <div className="services-page">
+        <header className="services-intro">
+          <h1>Our Services</h1>
+          <div className="services-intro-art" role="presentation" />
+        </header>
+        <nav className="service-index" aria-label="Service categories">
+          {categories.map((category, index) => (
+            <a key={category} href={"#" + category.toLowerCase()}>
+              <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+              {category}
+            </a>
+          ))}
+        </nav>
+        <div className="service-directory">
+          {categories.map((category, index) => (
+            <section className="service-category" id={category.toLowerCase()} key={category} aria-labelledby={"heading-" + category.toLowerCase()}>
+              <div className="service-category-intro">
+                <span className="category-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                <h2 id={"heading-" + category.toLowerCase()}>{category}</h2>
+                {categoryImages[category] ? (
+                  <div className="service-category-image">
+                    <Image
+                      src={categoryImages[category]}
+                      alt=""
+                      fill
+                      sizes="(max-width: 720px) 100vw, 32vw"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                ) : (
+                  <div className="service-category-mark" aria-hidden="true">PTS</div>
+                )}
+              </div>
+              <ol className="service-menu">
+                {serviceData[category].map((service) => (
+                  <li key={service.name}>
+                    <h3>{service.name}</h3>
+                    <span className="service-price">{service.price}</span>
+                  </li>
+                ))}
+              </ol>
+            </section>
           ))}
         </div>
-
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-semibold text-pink-600 mb-6">{selectedCategory}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {serviceData[selectedCategory].map((service) => (
-              <div key={service.name} className="border rounded-xl p-6 shadow hover:shadow-md transition">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.name}</h3>
-                <p className="text-gray-600">{service.price}</p>
-              </div>
-            ))}
-          </div>
+        <div className="services-end">
+          <Link href="/booking" className="site-button">Book an Appointment <span aria-hidden="true">↗</span></Link>
         </div>
-      </section>
+      </div>
     </Layout>
   );
 }
-

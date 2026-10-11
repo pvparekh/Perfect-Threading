@@ -1,0 +1,282 @@
+{
+  "baseCommit": "22337852f406935ec43bfe824dc11821265ff237",
+  "capturedDate": "2026-10-11",
+  "instructions": "Approved business content is immutable; this baseline preserves original source and all literal content. For JSX expression output, inspect rendered pages when available.",
+  "shas": {
+    "src/pages/index.tsx": "1205b243ee81831666c09dc98e30cbf3667104a7",
+    "src/pages/about.tsx": "9dce50877faa08c316152e2b041fc3b9993b7959",
+    "src/pages/services.tsx": "0adaa5ea667b562e4225fb2d1f20382310790bc9",
+    "src/pages/booking.tsx": "5998842ccb65bde765b673a8d6f43820efdc18f4",
+    "src/pages/contact.tsx": "b383b57d9c7d11c85029517a760d8498a6e7b77b",
+    "src/pages/blog/index.tsx": "64de54619bf90ecd7c840b11c0ea630660aa6f4b",
+    "src/pages/blog/facial-guide.tsx": "78d1beec29cd5fb980343f7a7adb396dea356b68",
+    "src/pages/blog/threading-guide.tsx": "7ca3971b593f2365f4e83056829110a456d74219",
+    "src/pages/blog/waxing-guide.tsx": "e71e2d692d20054f397af5d84017df83db166dc0",
+    "src/components/Footer.tsx": "48efef8308841e908469b2c7fc7d6e7fa62870b2",
+    "src/components/Navbar.tsx": "6aa914ff1c666d8663df4285247798de1a916633"
+  },
+  "services": [
+    {
+      "category": "Threading",
+      "items": [
+        {
+          "name": "Eyebrow",
+          "price": "$9"
+        },
+        {
+          "name": "Men’s Eyebrow",
+          "price": "$10"
+        },
+        {
+          "name": "Lip",
+          "price": "$4"
+        },
+        {
+          "name": "Forehead",
+          "price": "$4"
+        },
+        {
+          "name": "Cheek",
+          "price": "$6"
+        },
+        {
+          "name": "Neck",
+          "price": "$5"
+        },
+        {
+          "name": "Chin",
+          "price": "$5"
+        },
+        {
+          "name": "Sideburn",
+          "price": "$6"
+        },
+        {
+          "name": "Full Face",
+          "price": "$25"
+        }
+      ]
+    },
+    {
+      "category": "Waxing",
+      "items": [
+        {
+          "name": "Lip",
+          "price": "$6"
+        },
+        {
+          "name": "Chin",
+          "price": "$6"
+        },
+        {
+          "name": "Ear",
+          "price": "$7"
+        },
+        {
+          "name": "Sideburn",
+          "price": "$7"
+        },
+        {
+          "name": "Underarm",
+          "price": "$12"
+        },
+        {
+          "name": "Half Arm",
+          "price": "$20"
+        },
+        {
+          "name": "Full Arm",
+          "price": "$25"
+        },
+        {
+          "name": "Half Leg",
+          "price": "$25"
+        },
+        {
+          "name": "Full Leg",
+          "price": "$35"
+        },
+        {
+          "name": "Bikini",
+          "price": "$30"
+        },
+        {
+          "name": "Brazilian",
+          "price": "$30"
+        },
+        {
+          "name": "Full Facial Wax",
+          "price": "$30"
+        },
+        {
+          "name": "Stomach Wax",
+          "price": "$20+"
+        },
+        {
+          "name": "Chest Wax",
+          "price": "$20+"
+        },
+        {
+          "name": "Back Wax",
+          "price": "$20+"
+        },
+        {
+          "name": "Full Back Wax",
+          "price": "$35"
+        },
+        {
+          "name": "Men’s Back Wax",
+          "price": "$40+"
+        },
+        {
+          "name": "Henna Design",
+          "price": "$15+"
+        }
+      ]
+    },
+    {
+      "category": "Facials",
+      "items": [
+        {
+          "name": "Bleach",
+          "price": "$15"
+        },
+        {
+          "name": "Face Cleanup",
+          "price": "$35"
+        },
+        {
+          "name": "Teenage Facial",
+          "price": "$40"
+        },
+        {
+          "name": "Herbal / D-Tan Facial",
+          "price": "$45"
+        },
+        {
+          "name": "Fruit Facial",
+          "price": "$50"
+        },
+        {
+          "name": "Gold",
+          "price": "$55"
+        },
+        {
+          "name": "Anti Ageing",
+          "price": "$60"
+        },
+        {
+          "name": "Diamond",
+          "price": "$65"
+        },
+        {
+          "name": "Anti-Wrinkle",
+          "price": "$70"
+        },
+        {
+          "name": "Organic",
+          "price": "$75"
+        },
+        {
+          "name": "Vitamin E",
+          "price": "$80"
+        },
+        {
+          "name": "Aroma Therapy",
+          "price": "$90"
+        },
+        {
+          "name": "Signature (7 Step)",
+          "price": "$95"
+        }
+      ]
+    },
+    {
+      "category": "Hair",
+      "items": [
+        {
+          "name": "Men’s Haircut",
+          "price": "$20+"
+        },
+        {
+          "name": "Senior (65+) Men’s Haircut",
+          "price": "$12+"
+        },
+        {
+          "name": "Women’s Haircut",
+          "price": "$20+"
+        },
+        {
+          "name": "Layers/Step",
+          "price": "$30+"
+        },
+        {
+          "name": "Hair Wash",
+          "price": "$15"
+        },
+        {
+          "name": "Hair Color (BYO)",
+          "price": "$25+"
+        },
+        {
+          "name": "Hair Color/Wash",
+          "price": "$45+"
+        },
+        {
+          "name": "Hair Spa",
+          "price": "$35+"
+        },
+        {
+          "name": "Hot Oil Hair Massage",
+          "price": "$30+"
+        },
+        {
+          "name": "Blow Dry",
+          "price": "$25+"
+        },
+        {
+          "name": "Wash & Blow Dry",
+          "price": "$35+"
+        },
+        {
+          "name": "Full Hair Henna",
+          "price": "$30+"
+        },
+        {
+          "name": "R/T Hair Henna",
+          "price": "$25"
+        }
+      ]
+    },
+    {
+      "category": "Other",
+      "items": [
+        {
+          "name": "Make-up",
+          "price": "$65"
+        },
+        {
+          "name": "Hair Style (Updo’s)",
+          "price": "$65"
+        },
+        {
+          "name": "Saree",
+          "price": "$30"
+        }
+      ]
+    }
+  ],
+  "originalSource": {
+    "src/pages/index.tsx": "import Link from \"next/link\";\nimport Layout from \"../components/Layout\";\nimport Image from \"next/image\";\nimport { motion } from \"framer-motion\";\nconst container = {\n  hidden: { opacity: 1 },\n  visible: {\n    opacity: 1,\n    transition: {\n      staggerChildren: 0.05,\n    },\n  },\n};\n\nconst letter = {\n  hidden: { y: -40, opacity: 0 },\n  visible: {\n    y: 0,\n    opacity: 1,\n    transition: {\n      type: \"spring\" as const,\n      damping: 12,\n      stiffness: 120,\n    },\n  },\n};\n\nexport default function Home() {\n  const title = \"Perfect Threading Salon\";\n\n  return (\n    <Layout>\n      {/* Hero Section */}\n      <section className=\"bg-gradient-to-b from-rose-100 via-white to-pink-100 py-28 px-6 text-center\">\n        <motion.div\n  initial=\"hidden\"\n  animate=\"visible\"\n  variants={container}\n  className=\"inline-block\"\n>\n  <h1 className=\"text-5xl font-extrabold text-gray-900 mb-4\">\n    {title.split(\"\").map((char, index) => (\n      <motion.span\n        key={index}\n        variants={letter}\n        className=\"inline-block\"\n      >\n        {char === \" \" ? \"\\u00A0\" : char}\n      </motion.span>\n    ))}\n  </h1>\n</motion.div>\n\n        <p className=\"text-xl text-gray-600 mb-8 max-w-2xl mx-auto\">\n          Look sharp. Feel confident. Experience professional threading and beauty care tailored to you.\n        </p>\n        <Link\n          href=\"/booking\"\n          className=\"inline-block bg-gradient-to-r from-pink-600 to-rose-500 text-white text-xl px-8 py-4 rounded-lg shadow-md hover:scale-103 hover:to-rose-600 transition font-medium\"\n        >\n          Book an Appointment\n        </Link>\n      </section>\n\n      {/* Popular Services */}\n      <section className=\"py-24 bg-white px-6 text-center\">\n        <h2 className=\"text-4xl font-bold mb-12 text-gray-900\">Our Popular Services</h2>\n        <div className=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto\">\n          {[\n            { name: \"Eyebrow Threading\", price: \"$10\" },\n            { name: \"Men's Haircut\", price: \"$20+\" },\n            { name: \"Waxing\", price: \"$20+\" },\n            { name: \"Facials\", price: \"$40+\" }\n          ].map((service) => (\n            <div\n              key={service.name}\n              className=\"bg-white border rounded-xl p-6 shadow-md hover:shadow-lg transition transform hover:scale-[1.015] duration-300\"\n            >\n              <h3 className=\"text-xl font-semibold mb-2 text-gray-800\">{service.name}</h3>\n              <p className=\"text-gray-600 mb-3\">{service.price}</p>\n              <Link href=\"/booking\" className=\"text-pink-600 font-medium hover:underline\">\n                Book Now\n              </Link>\n            </div>\n          ))}\n        </div>\n      </section>\n\n      {/* Testimonials */}\n      <section className=\"bg-gray-100 py-24 px-6 text-center\">\n        <h2 className=\"text-4xl font-bold mb-12 text-gray-900\">Customer Testimonials</h2>\n        <div className=\"grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto\">\n          {[\n            {\n              name: \"Jackie G.\",\n              review:\n                \"literally the best place for getting your eyebrows threaded...the prices are soooooo reasonable. I recently moved to NYC and will wait until I am back home to get my eyebrows done because I don't trust anyone else!\",\n            },\n            {\n              name: \"Preya S.\",\n              review:\n                \"[Staff] is very professional and accommodating. She is very skilled and always gives personal attention to her clients. Her place is very clean and service is excellent. I highly recommend this place.\",\n            },\n            {\n              name: \"Maria P.\",\n              review:\n                \"Always a great experience. They are quick, do a great job the shop is clean and so nice\",\n            }\n          ].map((t) => (\n            <div\n              key={t.name}\n              className=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-left flex flex-col justify-between h-full min-h-[300px]\"\n            >\n              <p className=\"text-gray-700 italic mb-6\">“{t.review}”</p>\n              <p className=\"mt-auto font-semibold text-pink-700\">— {t.name}</p>\n            </div>\n          ))}\n        </div>\n      </section>\n\n      {/* Blog Preview Section */}\n      <section className=\"bg-gray-50 py-24 px-6\">\n        <div className=\"max-w-5xl mx-auto text-center mb-16\">\n          <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">From Our Blog</h2>\n          <p className=\"text-lg text-gray-600\">\n            Beauty tips, expert guides, and everything you need to glow — straight from our team.\n          </p>\n        </div>\n\n        <div className=\"max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8\">\n          <Link\n            href=\"/blog/facial-guide\"\n            className=\"block group bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition\"\n          >\n            <div className=\"relative w-full h-[200px]\">\n              <Image\n                src=\"/images/facial.jpg\"\n                alt=\"Facial Guide\"\n                layout=\"fill\"\n                objectFit=\"cover\"\n                className=\"transition-transform duration-300 group-hover:scale-105\"\n              />\n              <span className=\"absolute top-2 left-2 bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded\">\n                Skincare\n              </span>\n            </div>\n            <div className=\"p-5\">\n              <h3 className=\"text-xl font-semibold text-gray-800 mb-2\">A Complete Guide to Facials</h3>\n              <p className=\"text-sm text-gray-600\">\n                Learn how facials cleanse your pores, remove blackheads, and restore your skin’s glow in this detailed guide.\n              </p>\n              <span className=\"inline-block mt-4 text-pink-600 font-medium hover:underline\">\n                Read more →\n              </span>\n            </div>\n          </Link>\n          <Link\n            href=\"/blog/threading-guide\"\n            className=\"group block bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden border border-gray-200\"\n          >\n            <div className=\"relative w-full h-[200px]\">\n              <Image\n                src=\"/images/threading.jpg\"\n                alt=\"Facial Guide\"\n                layout=\"fill\"\n                objectFit=\"cover\"\n                className=\"group-hover:scale-105 transition-transform duration-300\"\n              />\n              <span className=\"absolute top-2 left-2 bg-pink-600 text-white text-xs font-semibold px-3 py-1 rounded\">\n                Hair Removal\n              </span>\n            </div>\n            <div className=\"p-5\">\n              <h3 className=\"text-xl font-semibold text-gray-800 mb-2\">\n                A Complete Guide to Threading\n              </h3>\n              <p className=\"text-gray-600 text-sm leading-6\">\n                Discover why threading is the cleaner, gentler way to shape brows and remove facial hair. no chemicals, no irritation, just precision.\n              </p>\n              <span className=\"inline-block mt-4 text-pink-600 font-medium hover:underline\">\n                Read more →\n              </span>\n            </div>\n          </Link>\n          <Link\n            href=\"/blog/waxing-guide\"\n            className=\"group block bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden border border-gray-200\"\n          >\n            <div className=\"relative w-full h-[200px]\">\n              <Image\n                src=\"/images/waxing.jpg\"\n                alt=\"Facial Guide\"\n                layout=\"fill\"\n                objectFit=\"cover\"\n                className=\"group-hover:scale-105 transition-transform duration-300\"\n              />\n              <span className=\"absolute top-2 left-2 bg-pink-600 text-white text-xs font-semibold px-3 py-1 rounded\">\n                Hair Removal\n              </span>\n            </div>\n            <div className=\"p-5\">\n              <h3 className=\"text-xl font-semibold text-gray-800 mb-2\">\n                A Complete Guide to Waxing\n              </h3>\n              <p className=\"text-gray-600 text-sm leading-6\">\n                Learn how waxing removes hair from the root for smoother skin, fewer ingrowns, and longer-lasting results than shaving ever could.\n\n              </p>\n              <span className=\"inline-block mt-4 text-pink-600 font-medium hover:underline\">\n                Read more →\n              </span>\n            </div>\n          </Link>\n        </div>\n        <div className=\"text-center mt-10\">\n        <Link href=\"/blog\" className=\"text-pink-600 font-medium my-10 hover:underline text-sm sm:text-base\">\n          See all blog posts →\n        </Link>\n</div>\n\n      </section>\n\n      {/* Final Call to Action */}\n      <section className=\"bg-pink-50 py-24 px-6 text-center\">\n        <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">Ready to Look Your Best?</h2>\n        <p className=\"text-lg text-gray-600 mb-6\">\n          Book your appointment now and let our professionals take care of you.\n        </p>\n        <Link\n          href=\"/booking\"\n          className=\"inline-block bg-gradient-to-r from-pink-600 to-rose-500 text-white px-8 py-4 rounded-lg shadow hover:scale-103 hover:from-pink-700 hover:to-rose-600 transition\"\n        >\n          Schedule Now\n        </Link>\n      </section>\n    </Layout>\n  );\n}\n//deployment test - ignore\nconsole.log(\"Force rebuild – \" + new Date().toISOString());\n",
+    "src/pages/about.tsx": "import Layout from \"../components/Layout\";\nimport Link from \"next/link\";\n\nexport default function About() {\n  return (\n    <Layout>\n      {/* Hero Section */}\n      <section className=\"bg-gradient-to-b from-rose-100 via-white to-pink-100 py-24 px-6 text-center\">\n        <h1 className=\"text-5xl font-extrabold text-gray-900 mb-4\">About Us</h1>\n        <p className=\"text-lg text-gray-600 max-w-2xl mx-auto\">\n          At Perfect Threading Salon, we blend tradition with modern technique to provide high-quality, affordable beauty services tailored for you.\n        </p>\n      </section>\n\n      {/* Our Story */}\n      <section className=\"bg-white py-24 px-6\">\n        <div className=\"max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center\">\n          <div>\n            <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">Our Story</h2>\n            <p className=\"text-gray-700 text-lg leading-relaxed mb-4\">\n              Founded with a passion for beauty and precision, our salon has grown into a trusted name in threading, waxing, and skincare. Every service we offer reflects our commitment to client satisfaction, cleanliness, and personalized care.\n            </p>\n            <p className=\"text-gray-600 text-md\">\n              Our team has decades of combined experience and believes that beauty should be accessible, safe, and empowering. We’re proud to serve our community with heart and skill.\n            </p>\n          </div>\n          <div className=\"rounded-xl overflow-hidden shadow-md h-full bg-pink-100 flex items-center justify-center\">\n            <p className=\"p-8 italic text-gray-700 text-center text-lg leading-relaxed\">\n              “We treat every client like family — with respect, care, and a touch of artistry.”\n            </p>\n          </div>\n        </div>\n      </section>\n      <section className=\"bg-pink-50 py-16 px-6 text-center\">\n  <h2 className=\"text-2xl sm:text-3xl font-bold text-gray-800 mb-4\">\n    Want to learn more about beauty and self-care?\n  </h2>\n  <p className=\"text-gray-600 mb-6 max-w-xl mx-auto\">\n    Read expert tips and in-depth beauty guides directly from our professional team.\n  </p>\n  <Link\n    href=\"/blog\"\n    className=\"inline-block bg-gradient-to-r from-pink-600 to-rose-500 text-white px-6 py-3 rounded-lg shadow hover:from-pink-700 hover:to-rose-600 transition\"\n  >\n    Read Our Blog\n  </Link>\n</section>\n\n      {/* Testimonials */}\n      <section className=\"bg-gray-50 py-24 px-6\">\n        <div className=\"text-center mb-16\">\n          <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">What Our Clients Say</h2>\n          <p className=\"text-lg text-gray-600\">\n            Real words from real people who’ve trusted us with their beauty journey.\n          </p>\n        </div>\n\n        <div className=\"max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8\">\n          {[\n            {\n              name: \"Deep V.\",\n              review: \"I’ve been going here for over 5 years. The staff is kind, gentle, and always delivers great results. I wouldn’t go anywhere else!\",\n            },\n            {\n              name: \"Drashti P.\",\n              review: \"Clean, professional, and excellent service. The threading is precise and quick every time.\",\n            },\n            {\n              name: \"Parth P.\",\n              review: \"It’s rare to find a salon that consistently goes above and beyond every visit.\",\n            },\n          ].map((t) => (\n            <div\n              key={t.name}\n              className=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition text-left flex flex-col justify-between h-full min-h-[300px]\"\n            >\n              <p className=\"text-gray-700 italic mb-6\">“{t.review}”</p>\n              <p className=\"mt-auto font-semibold text-pink-700\">— {t.name}</p>\n            </div>\n          ))}\n        </div>\n      </section>\n\n      {/* CTA */}\n      <section className=\"bg-pink-50 py-24 px-6 text-center\">\n        <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">Meet the Team That Cares</h2>\n        <p className=\"text-lg text-gray-600 mb-6 max-w-xl mx-auto\">\n          Ready to experience salon care where you’re treated like family? Book your appointment today.\n        </p>\n        <Link\n          href=\"/booking\"\n          className=\"inline-block bg-gradient-to-r from-pink-600 to-rose-500 text-white px-8 py-4 rounded-lg shadow hover:from-pink-700 hover:to-rose-600 transition\"\n        >\n          Book Now\n        </Link>\n      </section>\n      \n    </Layout>\n  );\n}\n",
+    "src/pages/services.tsx": "import Layout from \"../components/Layout\";\nimport { useState } from \"react\";\n\nexport default function Services() {\ntype Category = keyof typeof serviceData;\n  const serviceData = {\n    Threading: [\n      { name: \"Eyebrow\", price: \"$9\" },\n      { name: \"Men’s Eyebrow\", price: \"$10\" },\n      { name: \"Lip\", price: \"$4\" },\n      { name: \"Forehead\", price: \"$4\" },\n      { name: \"Cheek\", price: \"$6\" },\n      { name: \"Neck\", price: \"$5\" },\n      { name: \"Chin\", price: \"$5\" },\n      { name: \"Sideburn\", price: \"$6\" },\n      { name: \"Full Face\", price: \"$25\" }\n    ],\n    Waxing: [\n      { name: \"Lip\", price: \"$6\" },\n      { name: \"Chin\", price: \"$6\" },\n      { name: \"Ear\", price: \"$7\" },\n      { name: \"Sideburn\", price: \"$7\" },\n      { name: \"Underarm\", price: \"$12\" },\n      { name: \"Half Arm\", price: \"$20\" },\n      { name: \"Full Arm\", price: \"$25\" },\n      { name: \"Half Leg\", price: \"$25\" },\n      { name: \"Full Leg\", price: \"$35\" },\n      { name: \"Bikini\", price: \"$30\" },\n      { name: \"Brazilian\", price: \"$30\" },\n      { name: \"Full Facial Wax\", price: \"$30\" },\n      { name: \"Stomach Wax\", price: \"$20+\" },\n      { name: \"Chest Wax\", price: \"$20+\" },\n      { name: \"Back Wax\", price: \"$20+\" },\n      { name: \"Full Back Wax\", price: \"$35\" },\n      { name: \"Men’s Back Wax\", price: \"$40+\" },\n      { name: \"Henna Design\", price: \"$15+\" }\n    ],\n    Facials: [\n      { name: \"Bleach\", price: \"$15\" },\n      { name: \"Face Cleanup\", price: \"$35\" },\n      { name: \"Teenage Facial\", price: \"$40\" },\n      { name: \"Herbal / D-Tan Facial\", price: \"$45\" },\n      { name: \"Fruit Facial\", price: \"$50\" },\n      { name: \"Gold\", price: \"$55\" },\n      { name: \"Anti Ageing\", price: \"$60\" },\n      { name: \"Diamond\", price: \"$65\" },\n      { name: \"Anti-Wrinkle\", price: \"$70\" },\n      { name: \"Organic\", price: \"$75\" },\n      { name: \"Vitamin E\", price: \"$80\" },\n      { name: \"Aroma Therapy\", price: \"$90\" },\n      { name: \"Signature (7 Step)\", price: \"$95\" }\n    ],\n    Hair: [\n      { name: \"Men’s Haircut\", price: \"$20+\" },\n      { name: \"Senior (65+) Men’s Haircut\", price: \"$12+\" },\n      { name: \"Women’s Haircut\", price: \"$20+\" },\n      { name: \"Layers/Step\", price: \"$30+\" },\n      { name: \"Hair Wash\", price: \"$15\" },\n      { name: \"Hair Color (BYO)\", price: \"$25+\" },\n      { name: \"Hair Color/Wash\", price: \"$45+\" },\n      { name: \"Hair Spa\", price: \"$35+\" },\n      { name: \"Hot Oil Hair Massage\", price: \"$30+\" },\n      { name: \"Blow Dry\", price: \"$25+\" },\n      { name: \"Wash & Blow Dry\", price: \"$35+\" },\n      { name: \"Full Hair Henna\", price: \"$30+\" },\n      { name: \"R/T Hair Henna\", price: \"$25\" },\n    ],\n    Other: [\n      { name: \"Make-up\", price: \"$65\" },\n      { name: \"Hair Style (Updo’s)\", price: \"$65\" },\n      { name: \"Saree\", price: \"$30\" }\n    ]\n  };\n\n  const categories = Object.keys(serviceData) as Category[];\n  const [selectedCategory, setSelectedCategory] = useState<Category>(\"Threading\");\n\n  return (\n    <Layout>\n      <section className=\"bg-white py-20 px-6 text-center\">\n        <h1 className=\"text-5xl font-bold text-gray-800 mb-8\">Our Services</h1>\n\n        <div className=\"flex flex-wrap justify-center gap-4 mb-10\">\n          {categories.map((cat) => (\n            <button\n              key={cat}\n              onClick={() => setSelectedCategory(cat)}\n              className={`px-6 py-2 rounded-full border text-sm font-medium transition ${\n                selectedCategory === cat ? \"bg-pink-600 text-white\" : \"bg-white text-gray-700 hover:bg-pink-100\"\n              }`}\n            >\n              {cat}\n            </button>\n          ))}\n        </div>\n\n        <div className=\"max-w-5xl mx-auto\">\n          <h2 className=\"text-3xl font-semibold text-pink-600 mb-6\">{selectedCategory}</h2>\n          <div className=\"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8\">\n            {serviceData[selectedCategory].map((service) => (\n              <div key={service.name} className=\"border rounded-xl p-6 shadow hover:shadow-md transition\">\n                <h3 className=\"text-xl font-semibold text-gray-800 mb-2\">{service.name}</h3>\n                <p className=\"text-gray-600\">{service.price}</p>\n              </div>\n            ))}\n          </div>\n        </div>\n      </section>\n    </Layout>\n  );\n}\n\n",
+    "src/pages/booking.tsx": "//import React, { useState } from \"react\";\nimport { useRouter } from \"next/router\";\nimport Layout from \"../components/Layout\";\nimport Image from \"next/image\";\nimport Link from \"next/link\"; \n\nexport default function Booking() {\n  const router = useRouter();\n  const services = [\n    {\n      name: \"Eyebrow Threading\",\n      image: \"/images/threading.jpg\",\n      link: \"https://calendly.com/pvparekh14/perfect-threading-appointment\"\n    },\n    \n    {\n      name: \"Men's Haircut\",\n      image: \"/images/haircut.jpg\",\n      link: \"https://calendly.com/pvparekh14/perfect-threading-appointment\"\n    },\n    {\n      name: \"Waxing\",\n      image: \"/images/waxing3.jpg\",\n      link: \"https://calendly.com/pvparekh14/perfect-threading-appointment\"\n    },\n    {\n      name: \"Facials\",\n      image: \"/images/facial.jpg\",\n      link: \"https://calendly.com/pvparekh14/perfect-threading-appointment\"\n    },\n  ];\n\n  return (\n    <Layout>\n      <section className=\"bg-gradient-to-br from-rose-200 via-white to-pink-200 py-20 px-6 text-center backdrop-blur-sm shadow-lg min-h-screen\">\n\n        <h1 className=\"text-5xl font-bold text-gray-800 mb-4\">Book Your Appointment</h1>\n        <p className=\"text-lg text-gray-600 max-w-2xl mx-auto mb-12\">\n          Select a service below to schedule your visit. We’ll make sure you leave looking and feeling your best.\n        </p>\n\n      <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto\">\n  {services.map(service => (\n  <div\n    key={service.name}\n    className=\"bg-white border rounded-xl shadow-md hover:shadow-lg transition overflow-hidden flex flex-col animate-fadeIn\"\n  >\n    <div className=\"relative w-full h-[180px] overflow-hidden group\">\n      <Image\n  src={service.image}\n  alt={service.name}\n  fill\n  style={{ objectFit: \"cover\" }}\n  className=\"transition-transform duration-400 group-hover:scale-115\"\n/>\n\n    </div>\n\n    <div className=\"p-6 flex flex-col flex-grow items-center justify-between\">\n      <h3 className=\"text-xl font-semibold text-gray-800 mb-4\">{service.name}</h3>\n\n      {service.name.toLowerCase().includes(\"haircut\") ? (\n        <button\n          onClick={() => router.push(service.link)}\n          className=\"bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition\"\n        >\n          Book Now\n        </button>\n      ) : (\n        <p className=\"text-sm text-red-600 font-medium text-center mt-2\">\n          Please call <a href=\"tel:9733415970\" className=\"underline\">973-341-5970</a> to book an appointment!\n        </p>\n      )}\n    </div>\n  </div>\n))}\n\n</div>\n        <p className=\"text-sm text-gray-500 mt-12\">\n          Need help choosing a service? <Link href=\"/contact\" className=\"text-pink-600 hover:underline\">Contact us</Link>\n\n        </p>\n      </section>\n    </Layout>\n  );\n}\n",
+    "src/pages/contact.tsx": "import Layout from \"../components/Layout\";\nimport Link from \"next/link\";\n\nexport default function Contact() {\n  return (\n    <Layout>\n      {/* Hero Section */}\n      <section className=\"bg-gradient-to-b from-pink-100 via-white to-rose-50 py-20 px-6 text-center\">\n        <h1 className=\"text-5xl font-extrabold text-gray-900 mb-4\">Contact Us</h1>\n        <p className=\"text-lg text-gray-600 max-w-2xl mx-auto\">\n          We&apos;d love to hear from you. Whether it&apos;s about a service, a question, or feedback, reach out anytime!\n        </p>\n      </section>\n\n      {/* Contact Grid */}\n      <section className=\"bg-white py-24 px-4 sm:px-6 lg:px-12\">\n        <div className=\"max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-16 items-start\">\n          \n          {/* Left - Contact Info */}\n          <div className=\"bg-gray-50 p-8 rounded-xl shadow\">\n            <h2 className=\"text-2xl font-semibold text-gray-900 mb-6\">Get in Touch</h2>\n\n            <div className=\"space-y-5 text-gray-700 text-lg\">\n              <p><strong>📍 Address:</strong> 235 Parsippany Rd, Parsippany NJ 07054</p>\n              <p>\n                <strong>📞 Phone:</strong>{\" \"}\n                <a href=\"tel:9733415970\" className=\"text-pink-600 hover:underline\">973-341-5970</a>\n              </p>\n              <p>\n                <strong>✉️ Email:</strong>{\" \"}\n                <a href=\"mailto:salon@gmail.com\" className=\"text-pink-600 hover:underline\">salon@gmail.com</a>\n              </p>\n              <p><strong>📍 Instagram:</strong> @perfecthairandbeautysalon</p>\n              <p></p>\n\n              <div className=\"pt-6\">\n                <Link\n                  href=\"https://www.google.com/maps/dir/?api=1&destination=235+Parsippany+Rd,+Parsippany+NJ+07054\"\n                  target=\"_blank\"\n                  className=\"inline-block bg-gradient-to-r from-pink-600 to-rose-500 text-white px-6 py-3 rounded-lg shadow hover:from-pink-700 hover:to-rose-600 transition\"\n                >\n                  Get Directions\n                </Link>\n              </div>\n            </div>\n          </div>\n\n          {/* Right - Embedded Map */}\n          <div className=\"w-full h-[600px] rounded-xl overflow-hidden shadow-lg\">\n            <iframe\n              title=\"Perfect Threading Salon Location\"\n              src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.6599979884672!2d-74.42992372261493!3d40.85738807137208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3081fdcb33263%3A0x228e1beed054a709!2s235%20Parsippany%20Rd%2C%20Parsippany%2C%20NJ%2007054!5e0!3m2!1sen!2sus!4v1748900790322!5m2!1sen!2sus\"\n              className=\"w-full h-full border-0\"\n              allowFullScreen\n              loading=\"lazy\"\n              referrerPolicy=\"no-referrer-when-downgrade\"\n            ></iframe>\n          </div>\n        </div>\n      </section>\n    </Layout>\n  );\n}\n",
+    "src/pages/blog/index.tsx": "import Layout from \"../../components/Layout\";\nimport Link from \"next/link\";\nimport Image from \"next/image\";\n\nexport default function BlogIndex() {\n  return (\n    <Layout>\n      {/* Hero */}\n      <section className=\"bg-gradient-to-b from-pink-50 via-white to-rose-50 py-20 px-6 text-center\">\n        <div className=\"max-w-5xl mx-auto\">\n          <h1 className=\"text-5xl font-extrabold text-gray-900 mb-4\">Explore Our Blog</h1>\n          <p className=\"text-lg text-gray-600\">\n            Discover tips, guides, and expert advice to enhance your beauty and self-care journey.\n          </p>\n        </div>\n      </section>\n\n      {/* Blog Card Grid */}\n      <section className=\"bg-white py-20 px-4 sm:px-6 lg:px-12\">\n        <div className=\"max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10\">\n          {/* Blog Post Card */}\n          <Link\n            href=\"/blog/facial-guide\"\n            className=\"group block bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden border border-gray-200\"\n          >\n            <div className=\"relative w-full h-[200px]\">\n              <Image\n                src=\"/images/facial.jpg\"\n                alt=\"Facial Guide\"\n                layout=\"fill\"\n                objectFit=\"cover\"\n                className=\"group-hover:scale-105 transition-transform duration-300\"\n              />\n              <span className=\"absolute top-2 left-2 bg-pink-600 text-white text-xs font-semibold px-3 py-1 rounded\">\n                Skincare\n              </span>\n            </div>\n            <div className=\"p-5\">\n              <h3 className=\"text-xl font-semibold text-gray-800 mb-2\">\n                A Complete Guide to Facials\n              </h3>\n              <p className=\"text-gray-600 text-sm leading-6\">\n                Learn how facials cleanse your pores, remove blackheads, and restore your skin&apos;s glow in this detailed guide.\n              </p>\n              <span className=\"inline-block mt-4 text-pink-600 font-medium hover:underline\">\n                Read more →\n              </span>\n            </div>\n          </Link>\n          <Link\n            href=\"/blog/threading-guide\"\n            className=\"group block bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden border border-gray-200\"\n          >\n            <div className=\"relative w-full h-[200px]\">\n              <Image\n                src=\"/images/threading.jpg\"\n                alt=\"Facial Guide\"\n                layout=\"fill\"\n                objectFit=\"cover\"\n                className=\"group-hover:scale-105 transition-transform duration-300\"\n              />\n              <span className=\"absolute top-2 left-2 bg-pink-600 text-white text-xs font-semibold px-3 py-1 rounded\">\n                Hair Removal\n              </span>\n            </div>\n            <div className=\"p-5\">\n              <h3 className=\"text-xl font-semibold text-gray-800 mb-2\">\n                A Complete Guide to Threading\n              </h3>\n              <p className=\"text-gray-600 text-sm leading-6\">\n                Discover why threading is the cleaner, gentler way to shape brows and remove facial hair. no chemicals, no irritation, just precision.\n\n              </p>\n              <span className=\"inline-block mt-4 text-pink-600 font-medium hover:underline\">\n                Read more →\n              </span>\n            </div>\n          </Link>\n          <Link\n            href=\"/blog/waxing-guide\"\n            className=\"group block bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden border border-gray-200\"\n          >\n            <div className=\"relative w-full h-[200px]\">\n              <Image\n                src=\"/images/waxing.jpg\"\n                alt=\"Facial Guide\"\n                layout=\"fill\"\n                objectFit=\"cover\"\n                className=\"group-hover:scale-105 transition-transform duration-300\"\n              />\n              <span className=\"absolute top-2 left-2 bg-pink-600 text-white text-xs font-semibold px-3 py-1 rounded\">\n                Hair Removal\n              </span>\n            </div>\n            <div className=\"p-5\">\n              <h3 className=\"text-xl font-semibold text-gray-800 mb-2\">\n                A Complete Guide to Waxing\n              </h3>\n              <p className=\"text-gray-600 text-sm leading-6\">\n                Learn how waxing removes hair from the root for smoother skin, fewer ingrowns, and longer-lasting results than shaving ever could.\n \n              </p>\n              <span className=\"inline-block mt-4 text-pink-600 font-medium hover:underline\">\n                Read more →\n              </span>\n            </div>\n          </Link>\n          \n\n        </div>\n      </section>\n    </Layout>\n  );\n}\n",
+    "src/pages/blog/facial-guide.tsx": "import Layout from \"../../components/Layout\";\nimport Image from \"next/image\";\nimport Link from \"next/link\";\n\nexport default function FacialGuide() {\n  return (\n    <Layout>\n      <section className=\"py-24 px-6 bg-white text-gray-800 max-w-6xl mx-auto\">\n        {/* Hero */}\n        <h1 className=\"text-5xl font-extrabold mb-6 text-center text-pink-600\">\n          The Ultimate Facial Guide\n        </h1>\n        <p className=\"text-lg text-gray-600 text-center max-w-2xl mx-auto mb-10\">\n          Discover how a professional facial can transform your skin and boost your confidence.\n        </p>\n\n        {/* Main Grid */}\n        <div className=\"grid md:grid-cols-[2fr_1fr] gap-12\">\n          {/* Content */}\n          <div>\n            <div className=\"relative w-full h-[300px] mb-8 rounded-xl overflow-hidden shadow\">\n              <Image\n                src=\"/images/facial.jpg\"\n                alt=\"Facial Treatment\"\n                layout=\"fill\"\n                objectFit=\"cover\"\n              />\n            </div>\n\n            <p className=\"text-lg leading-8 mb-6 text-gray-700\">\n              You know those stubborn bumps on your nose that seem to get worse with time? Or the dullness that creeps in after long days and sleepless nights? We’ve got a solution. Facials aren’t just a luxury — they’re a necessary part of maintaining healthy, vibrant skin.\n            </p>\n\n            <p className=\"text-lg leading-8 mb-6 text-gray-700\">\n              At Perfect Threading Salon, we combine science-backed skincare with spa-level pampering. Our facials are crafted to open your pores, extract impurities, and rejuvenate your skin — all while helping you relax and reset.\n            </p>\n\n            <div className=\"border-l-4 border-pink-600 pl-6 my-10\">\n              <h2 className=\"text-2xl font-bold text-pink-600 mb-4\">Step-by-Step Process</h2>\n              <ul className=\"list-disc space-y-4 text-gray-700 leading-7 pl-4\">\n                <li><strong>Cleansing:</strong> Removes surface dirt and makeup.</li>\n                <li><strong>Exfoliation:</strong> Buffs away dead skin for smoother texture.</li>\n                <li><strong>Steaming:</strong> Opens pores to prep for extraction.</li>\n                <li><strong>Extraction:</strong> Clears blackheads and buildup without damage.</li>\n                <li><strong>Massage:</strong> Boosts circulation and releases facial tension.</li>\n                <li><strong>Mask Application:</strong> Tailored to your skin needs (hydration, glow, acne care).</li>\n                <li><strong>Moisturizer & SPF:</strong> Locks in hydration and shields post-treatment skin.</li>\n              </ul>\n            </div>\n\n            <h2 className=\"text-2xl font-bold text-pink-600 mb-4 mt-12\">Real Benefits of Facials</h2>\n            <ul className=\"list-disc space-y-3 text-gray-700 pl-5\">\n              <li>Removes blackheads, whiteheads, and acne-causing debris</li>\n              <li>Reduces skin texture and evens tone</li>\n              <li>Deep hydration and glow restoration</li>\n              <li>Supports anti-aging and smooths fine lines</li>\n              <li>Relaxes facial muscles and reduces tension</li>\n              <li>Increases product absorption for at-home routines</li>\n            </ul>\n\n            <p className=\"mt-8 text-gray-700 leading-8\">\n              Our facial experts are trained in both modern dermatological care and ancient techniques to ensure the best of both worlds. Whether you’re prepping for an event or maintaining your skin on a monthly basis, we tailor every facial to your unique skin needs.\n            </p>\n\n            <p className=\"mt-8 font-semibold text-pink-600 text-lg\">\n              Ready to give your skin what it deserves?{\" \"}\n              <Link href=\"/booking\" className=\"underline hover:text-pink-800\">\n                Book your facial appointment now\n              </Link>.\n            </p>\n          </div>\n\n          {/* Sidebar */}\n          <aside className=\"space-y-10\">\n            <div className=\"bg-pink-50 p-6 rounded-lg shadow\">\n              <h3 className=\"text-xl font-semibold text-pink-600 mb-2\">Have Questions?</h3>\n              <p className=\"text-gray-700 mb-4\">\n                Need help choosing the right facial or want to speak to a specialist?\n              </p>\n              <Link\n                href=\"/contact\"\n                className=\"inline-block bg-pink-600 text-white px-5 py-2 rounded hover:bg-pink-700 transition\"\n              >\n                Contact Us\n              </Link>\n            </div>\n          </aside>\n        </div>\n      </section>\n    </Layout>\n  );\n}\n\n",
+    "src/pages/blog/threading-guide.tsx": "import Layout from \"../../components/Layout\";\nimport Image from \"next/image\";\nimport Link from \"next/link\";\n\nexport default function ThreadingGuide() {\n  return (\n    <Layout>\n      <section className=\"py-24 px-6 bg-white text-gray-800 max-w-6xl mx-auto\">\n        <h1 className=\"text-5xl font-extrabold mb-6 text-center text-pink-600\">\n          Why Threading is the Superior Choice\n        </h1>\n        <p className=\"text-lg text-gray-600 text-center max-w-2xl mx-auto mb-10\">\n          Threading is precise, long-lasting, and far gentler on your skin than shaving or waxing.\n        </p>\n\n        <div className=\"grid md:grid-cols-[2fr_1fr] gap-12\">\n          <div>\n            <div className=\"relative w-full h-[300px] mb-8 rounded-xl overflow-hidden shadow\">\n              <Image\n                src=\"/images/threading.jpg\"\n                alt=\"Eyebrow Threading\"\n                layout=\"fill\"\n                objectFit=\"cover\"\n              />\n            </div>\n\n            <p className=\"text-lg leading-8 mb-6 text-gray-700\">\n              Most people reach for razors because it’s fast and cheap—but that’s a short-term fix. Shaving removes only the surface hair, which grows back in a day or two, often blunt and coarse. Even worse, frequent shaving can cause razor bumps, ingrown hairs, and darkened skin over time.\n            </p>\n\n            <p className=\"text-lg leading-8 mb-6 text-gray-700\">\n              Threading is different. It removes hair from the follicle root, ensuring smoother skin and results that last up to four weeks. It’s highly precise—perfect for shaping eyebrows and removing even the finest facial hair without any chemicals, heat, or irritation.\n            </p>\n\n            <h2 className=\"text-2xl font-bold text-pink-600 mb-4 mt-12\">Why Choose Threading?</h2>\n            <ul className=\"list-disc space-y-3 text-gray-700 pl-5\">\n              <li>Hair regrowth is slower and finer</li>\n              <li>Less irritation—no razor burn or cuts</li>\n              <li>No chemicals, heat, or damage to skin</li>\n              <li>Perfectly sculpted results for brows, lips, forehead, and cheeks</li>\n              <li>Minimizes risk of ingrown hairs</li>\n              <li>Leaves skin soft and naturally exfoliated</li>\n            </ul>\n\n            <p className=\"mt-8 font-semibold text-pink-600 text-lg\">\n              Say goodbye to daily shaving and hello to clean, defined beauty.{\" \"}\n              <Link href=\"/booking\" className=\"underline hover:text-pink-800\">\n                Book your threading session now\n              </Link>.\n            </p>\n          </div>\n\n          <aside className=\"space-y-10\">\n            <div className=\"bg-pink-50 p-6 rounded-lg shadow\">\n              <h3 className=\"text-xl font-semibold text-pink-600 mb-2\">Have Questions?</h3>\n              <p className=\"text-gray-700 mb-4\">\n                Want to know if threading is right for your skin type?\n              </p>\n              <Link\n                href=\"/contact\"\n                className=\"inline-block bg-pink-600 text-white px-5 py-2 rounded hover:bg-pink-700 transition\"\n              >\n                Contact Us\n              </Link>\n            </div>\n          </aside>\n        </div>\n      </section>\n    </Layout>\n  );\n}",
+    "src/pages/blog/waxing-guide.tsx": "import Layout from \"../../components/Layout\";\nimport Image from \"next/image\";\nimport Link from \"next/link\";\n\nexport default function WaxingGuide() {\n  return (\n    <Layout>\n      <section className=\"py-24 px-6 bg-white text-gray-800 max-w-6xl mx-auto\">\n        <h1 className=\"text-5xl font-extrabold mb-6 text-center text-pink-600\">\n          The Truth About Waxing vs. Shaving\n        </h1>\n        <p className=\"text-lg text-gray-600 text-center max-w-2xl mx-auto mb-10\">\n          Shaving may be fast, but waxing gives you smooth, radiant skin that lasts.\n        </p>\n\n        <div className=\"grid md:grid-cols-[2fr_1fr] gap-12\">\n          <div>\n            <div className=\"relative w-full h-[300px] mb-8 rounded-xl overflow-hidden shadow\">\n              <Image\n                src=\"/images/waxing.jpg\"\n                alt=\"Waxing Treatment\"\n                layout=\"fill\"\n                objectFit=\"cover\"\n              />\n            </div>\n\n            <p className=\"text-lg leading-8 mb-6 text-gray-700\">\n              Shaving simply slices hair at the surface. Within 24–48 hours, you&apos;re already feeling stubble, and worse—risking razor bumps, ingrown hairs, and skin darkening over time. Waxing removes the entire hair from the root, giving you a clean finish that lasts 3–6 weeks.\n            </p>\n\n            <p className=\"text-lg leading-8 mb-6 text-gray-700\">\n              Regular waxing actually weakens the hair follicle, causing hair to grow back finer and sparser. Plus, exfoliating dead skin in the process reveals softer, smoother skin instantly. You’ll feel the difference—and others will notice too.\n            </p>\n\n            <h2 className=\"text-2xl font-bold text-pink-600 mb-4 mt-12\">Why Waxing Wins</h2>\n            <ul className=\"list-disc space-y-3 text-gray-700 pl-5\">\n              <li>Removes hair from the root for longer-lasting smoothness</li>\n              <li>Reduces chances of ingrown hairs and shaving irritation</li>\n              <li>Exfoliates dead skin for a glowier, even-toned look</li>\n              <li>Slows hair regrowth over time</li>\n              <li>Leaves skin soft and touchable</li>\n              <li>No nicks, cuts, or razor burn</li>\n            </ul>\n\n            <p className=\"mt-8 font-semibold text-pink-600 text-lg\">\n              Experience the glow of freshly waxed skin.{\" \"}\n              <Link href=\"/booking\" className=\"underline hover:text-pink-800\">\n                Book your waxing appointment today\n              </Link>.\n            </p>\n          </div>\n\n          <aside className=\"space-y-10\">\n            <div className=\"bg-pink-50 p-6 rounded-lg shadow\">\n              <h3 className=\"text-xl font-semibold text-pink-600 mb-2\">Need Help?</h3>\n              <p className=\"text-gray-700 mb-4\">\n                Curious if waxing is right for you or first-time nervous? We’re here for you.\n              </p>\n              <Link\n                href=\"/contact\"\n                className=\"inline-block bg-pink-600 text-white px-5 py-2 rounded hover:bg-pink-700 transition\"\n              >\n                Contact Us\n              </Link>\n            </div>\n          </aside>\n        </div>\n      </section>\n    </Layout>\n  );\n}\n",
+    "src/components/Footer.tsx": "export default function Footer() {\n  return (\n    <footer className=\"bg-gray-800 text-white text-center p-6 mt-12\">\n      <p className=\"text-lg font-bold\">Perfect Threading Salon</p>\n      <p>Contact us: (973) 341-5970 |📍235 Parsippany Rd, Parsippany, NJ</p>\n      <div className=\"space-x-4 mt-2\">\n        <a href=\"#\">Instagram</a>\n      </div>\n      <p className=\"mt-4\">&copy; {new Date().getFullYear()} Perfect Threading Salon. All Rights Reserved.</p>\n    </footer>\n  );\n}\n",
+    "src/components/Navbar.tsx": "import Link from 'next/link';\n\nexport default function Navbar() {\n  return (\n    <nav className=\"bg-gray-800 text-white p-6 flex justify-between items-center \">\n      <h1 className=\"text-2xl font-bold\">Perfect Threading Salon</h1>\n      <div className=\"space-x-6 text-sm\">\n        <div className=\"space-x-6 text-sm\">\n  <Link href=\"/\" className=\"hover:text-pink-600 hover:scale-110 transition transform duration-200 inline-block\">Home</Link>\n  <Link href=\"/about\" className=\"hover:text-pink-600 hover:scale-110 transition transform duration-200 inline-block\">About</Link>\n  <Link href=\"/services\" className=\"hover:text-pink-600 hover:scale-110 transition transform duration-200 inline-block\">Services</Link>\n  <Link href=\"/booking\" className=\"hover:text-pink-600 hover:scale-110 transition transform duration-200 inline-block\">Booking</Link>\n  <Link href=\"/contact\" className=\"hover:text-pink-600 hover:scale-110 transition transform duration-200 inline-block\">Contact</Link>\n  <Link href=\"/blog\" className=\"hover:text-pink-600 hover:scale-110 transition transform duration-200 inline-block\">Blog</Link>\n</div>\n      </div>\n    </nav>\n  );\n}\n"
+  }
+}
